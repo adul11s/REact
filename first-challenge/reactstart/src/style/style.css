@@ -1,0 +1,804 @@
+.shadow {
+  -webkit-box-shadow: 0px 3px 6px 0px rgba(193, 195, 199, 1);
+  -moz-box-shadow: 0px 3px 6px 0px rgba(193, 195, 199, 1);
+  box-shadow: 0px 3px 6px 0px rgba(193, 195, 199, 1);
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Muli", sans-serif;
+  font-size: 17px;
+  color: #19345e;
+}
+
+/* Header */
+.logo-awal {
+  width: 110px;
+  height: 59px;
+}
+
+.nav-link .active {
+  color: #f47522 !important;
+}
+
+.nav-link {
+  font-family: "Muli", sans-serif;
+  font-size: 15px;
+  color: #19345e !important;
+  margin-right: 20px;
+}
+
+.nav-link:hover {
+  color: #f47522 !important;
+}
+
+#bawah-header {
+  padding: 161px 37px 162px 160px;
+}
+
+/* Home Page 1 and Utilities*/
+a,
+#hi-there {
+  color: #19345e;
+}
+
+a:hover {
+  color: #f47522;
+}
+
+li {
+  padding: 0 25px;
+  font-size: 15px;
+}
+
+.btn-awal {
+  background-color: #f47522;
+  color: white !important;
+  width: 130px;
+  height: 38px;
+  border-radius: 20px !important;
+  font-size: 15px;
+}
+
+.btn-awal:hover {
+  background-color: white;
+  color: #f47522;
+  border: 1px solid #f47522;
+  border-radius: 20px;
+  width: 130px;
+  height: 38px;
+  font-size: 15px;
+}
+
+#background-utama {
+  background-color: #edf6ff;
+  width: 100%;
+  height: 100%;
+}
+/* 
+.gambar-group {
+  width: 420px;
+  height: 420px;
+  background: transparent url("../images/Group_16136@2x.png") 0% 0% no-repeat
+    padding-box;
+  opacity: 1;
+  float: right;
+} */
+
+#hi-there {
+  padding: 217px 160px 220px 0px;
+}
+
+#there {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#weAre,
+#alta {
+  font-size: 45px;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+}
+
+#alta {
+  color: #f47522;
+  font-weight: bold;
+}
+
+#paragraph {
+  top: 484px;
+  left: 617px;
+  width: 456px;
+  height: 80px;
+  text-align: left;
+  font: 17px;
+  font-weight: bold;
+  letter-spacing: 0;
+  color: #19345e;
+  opacity: 1;
+}
+
+.img-item .btn {
+  background-color: #f47522;
+  color: white;
+  border-radius: 50px;
+  font-size: 15px;
+  top: 573px;
+  left: 617px;
+  width: 230px;
+  height: 40px;
+}
+
+.img-more {
+  top: 583px;
+  left: 656px;
+  width: 20px;
+  height: 20px;
+  align-items: flex-start;
+  padding-right: 5px;
+}
+
+.img-more-after {
+  top: 583px;
+  left: 656px;
+  width: 20px;
+  height: 20px;
+  align-items: flex-start;
+  padding-right: 5px;
+}
+
+.img-more:hover {
+  content: "";
+  top: 583px;
+  left: 656px;
+  width: 20px;
+  height: 20px;
+  align-items: flex-start;
+  padding-right: 5px;
+}
+
+.img-more1 {
+  margin-bottom: 242px;
+  top: 1012px;
+  margin-left: -43px;
+  width: 20px;
+  height: 20px;
+  align-items: flex-start;
+  padding-right: 5px;
+}
+
+.img-more1-after {
+  margin-bottom: 242px;
+  margin-left: -43px;
+  top: 1012px;
+  left: 528px;
+  width: 20px;
+  height: 20px;
+  align-items: flex-start;
+  padding-right: 5px;
+}
+
+.img-more1:hover {
+  margin-bottom: 242px;
+  content: "";
+  top: 1012px;
+  left: 528px;
+  width: 20px;
+  height: 20px;
+  align-items: flex-start;
+  padding-right: 5px;
+}
+
+#gambar-under-hi img {
+  background-color: #f47522;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  padding: 7.5px 7.5px;
+  margin-left: 101px;
+  margin-top: 42px;
+}
+
+#gambar-under-hi {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+#gambar-under-hi span {
+  font-size: 14px;
+  font-weight: normal;
+  margin-left: 150px;
+  margin-top: 0;
+  align-items: center;
+}
+
+.border-shadow {
+  display: flex;
+  border-radius: 100px;
+  top: 833px;
+  left: 210px;
+  width: 814px;
+  height: 110px;
+  margin-left: 210px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 100px;
+  opacity: 1;
+}
+
+.border-right {
+  margin-left: 20px;
+  border-right: black 2px solid;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.gambar-kiri {
+  width: 225px;
+  height: 265px;
+}
+
+.teams img {
+  width: 225px;
+  height: 265px;
+  position: relative;
+}
+
+#about {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+#about span {
+  font-size: 25px;
+  text-align: center;
+  color: #19345e;
+}
+
+#about p {
+  font-size: 25px;
+  text-align: center;
+  color: #f47522;
+  font-size: 25px;
+}
+
+#everyone {
+  background-color: rgba(25, 52, 94, 0.7);
+  color: white;
+}
+
+.word-everyone {
+  margin-bottom: 0;
+  font-weight: bold;
+  font-size: 55px;
+}
+
+.p-everyone {
+  margin-bottom: 144px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.gambar-dan-teks {
+  display: inline;
+  position: relative;
+}
+
+.home-alta {
+  padding: 160px 160px;
+  background-color: #edf6ff;
+}
+
+.home-alta {
+  text-align: center;
+}
+
+.home-alta h2 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.home-alta h3 {
+  font-size: 45px;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+}
+
+.home-alta h3 span {
+  color: #f47522;
+}
+
+.home-alta p {
+  font: 17px;
+  font-weight: bold;
+  letter-spacing: 0;
+  opacity: 1;
+}
+
+.home-alta .btn {
+  width: 230px;
+  height: 40px;
+  background: #f47522 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 50px;
+  opacity: 1;
+}
+
+.home-alta .btn:hover {
+  background-color: white;
+  color: #f47522 !important;
+  border: 1px solid #f47522;
+  border-radius: 50px;
+  width: 230px;
+  height: 40px;
+  box-shadow: 0px 3px 6px #00000029;
+  opacity: 1;
+}
+
+#batik {
+  background-image: url("../images/ornament_batik.png");
+  height: 291px;
+  width: 200px;
+}
+
+.border-gambar-blueteam {
+  margin-top: 10px;
+  position: absolute;
+  display: flex;
+  width: 320px;
+  height: 399px;
+  border: #19345e solid 10px;
+  top: 15px;
+  left: -10px;
+}
+
+.border-gambarteam {
+  margin-top: 10px;
+  position: absolute;
+  display: flex;
+  width: 320px;
+  height: 399px;
+  border: #f47522 solid 10px;
+  top: 15px;
+  left: -10px;
+}
+
+.tombol-mail .btn {
+  background-color: #f47522;
+  color: #ffffff;
+  border-radius: 50px;
+  width: 205px;
+  height: 40px;
+  font-size: 15px;
+  left: 489px;
+  top: 51px;
+}
+
+.tombol-mail .btn:hover {
+  background-color: white;
+  color: #f47522 !important;
+  border: 1px solid #f47522;
+  border-radius: 50px;
+  font-size: 15px;
+  width: 205px;
+  height: 40px;
+  left: 489px;
+  top: 51px;
+}
+
+.gambar-mail {
+  height: 20px;
+  width: 20px;
+}
+
+/* Jumbotron */
+
+.jumbotron {
+  background-image: url("../images/img_blog.jpg");
+  background-size: cover;
+  color: white;
+  height: 384px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.jumbotron .container {
+  z-index: 1;
+  position: relative;
+}
+
+.jumbotron::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.jumbotron .display-4 {
+  margin-top: 45px;
+  font-size: 30px;
+}
+
+.jumbotron .lead {
+  font-size: 15px;
+}
+
+.jumbo {
+  background-image: url("../images/bg-people@2x.png");
+  background-size: cover;
+  color: white;
+  height: 384px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.jumbo .container {
+  z-index: 1;
+  position: relative;
+}
+
+.jumbo::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #19345e !important;
+  opacity: 0.7;
+  position: absolute;
+  bottom: 0;
+}
+
+.jumbo .display-4 {
+  margin-top: 45px;
+  font-size: 30px;
+}
+
+.jumbo .lead {
+  font-size: 15px;
+}
+
+/* info panel kapsul */
+
+.info-panel {
+  background-color: white;
+  border-radius: 100px;
+  box-shadow: 0px 3px 6px #00000029;
+  padding: 30px;
+}
+.text-kapsul h4 {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.text-kapsul p {
+  font-size: 14px;
+  text-align: center;
+}
+
+.text-kapsul img {
+  background-color: #f47522;
+  background-size: cover;
+  border-radius: 100%;
+  height: 40px;
+  width: 40px;
+  align-content: center;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+/* Blogs */
+
+.kepsyen h3 {
+  text-align: left;
+  font: Bold 20px/24px Roboto;
+  letter-spacing: 0;
+  color: #19345e;
+  opacity: 1;
+}
+
+.kepsyen span {
+  text-align: left;
+  font: Regular 14px/24px Poppins;
+  letter-spacing: 0;
+  color: #707070;
+  opacity: 1;
+}
+
+.kepsyen p {
+  text-align: left;
+  font: Regular 14px/24px Poppins;
+  letter-spacing: 0;
+  color: #19345e;
+  opacity: 1;
+  width: 275px;
+  height: 94px;
+}
+
+#judulblog {
+  text-align: left;
+  font-size: 45px;
+  font-family: "Muli";
+  font-weight: 800;
+  letter-spacing: 0;
+  color: #19345e;
+  opacity: 1;
+}
+
+#larry {
+  top: 5px;
+  bottom: 30px;
+  width: 276px;
+  height: 25px;
+  text-align: left;
+  font: Bold 15px/58px Muli;
+  letter-spacing: 0;
+  color: #19345e;
+  opacity: 1;
+}
+
+#pg-larry {
+  margin: 50px 0;
+  top: 5px;
+  text-align: left;
+  font-size: 5px;
+  font-family: "Poppins";
+  letter-spacing: 0;
+  color: #19345e;
+  opacity: 1;
+}
+
+/* Footer */
+
+#logo-sosmed {
+  size: 20px;
+  align-self: center;
+  align-items: center;
+}
+
+#copyright {
+  padding: 30px 10px;
+  font-size: 12px;
+}
+
+#gb-kontak img {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+#gb-kontak p {
+  font-size: 18px;
+}
+
+.logo {
+  width: 21px;
+  height: 21px;
+  margin-top: 15px;
+  margin-left: 0;
+}
+
+.logo-footer {
+  margin-top: 40px;
+
+  width: 110px;
+  height: 59px;
+  /* padding-top: 40px; */
+}
+
+.gambar-kalendar {
+  width: 14px;
+  height: 14px;
+}
+
+.border-gambar {
+  position: relative;
+  display: inline-block;
+}
+
+.border-gambar-blue {
+  position: relative;
+  display: inline-block;
+}
+
+.border-gambar::after {
+  border: #f47522 solid 10px;
+  bottom: -5%;
+  left: -8%;
+  width: 225px;
+  height: 265px;
+  position: absolute;
+  content: "";
+}
+
+.border-gambar-blue::after {
+  border: #19345e solid 10px;
+  bottom: -5%;
+  left: -8%;
+  width: 225px;
+  height: 265px;
+  position: absolute;
+  content: "";
+}
+
+.border-gambar:hover {
+  box-shadow: 0 7px 5px #19345e;
+}
+
+.border-gambar-blue:hover {
+  box-shadow: 0 7px 5px #19345e;
+}
+
+.gambar-dan-teks:hover {
+  top: -15px;
+}
+
+.gambar-dan-teks h3 {
+  margin-top: 15px;
+}
+
+.border-garis {
+  border-bottom: black 1px;
+  border-bottom-color: #aaaaaa;
+  width: 80%;
+}
+
+.bold-huruf {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.gambar-profil {
+  width: 320px;
+  height: 399px;
+  margin-top: 61px;
+}
+
+/* Page Team */
+
+.teams figcaption {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.teams h3 {
+  font: Bold 20px/24px Roboto;
+  letter-spacing: 0;
+  color: #f47522;
+  opacity: 1;
+}
+
+.teams span {
+  font: Regular 15px/24px Poppins;
+  letter-spacing: 0;
+  color: #19345e;
+  opacity: 1;
+}
+
+/* Page Form */
+
+.form-group.required .control-label:after {
+  content: "*";
+  color: red;
+}
+
+/* Media Laptop */
+
+@media (min-width: 992px) {
+  #about {
+    font-weight: bold;
+    font-size: 45px;
+  }
+
+  #about span {
+    font-size: 45px;
+    text-align: center;
+    color: #19345e;
+  }
+
+  #about p {
+    font-size: 45px;
+    text-align: center;
+    color: #f47522;
+    font-size: 50px;
+  }
+
+  .check-now {
+    margin-left: 120px;
+  }
+  .read-more {
+    margin-left: 200px;
+    text-underline-position: auto;
+  }
+}
+@media (min-width: 992px) {
+  .jumbotron {
+    background-image: url("../images/img_blog.jpg");
+    background-size: cover;
+    color: white;
+    height: 484px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .jumbotron .display-4 {
+    margin-top: 145px;
+    font-size: 55px;
+  }
+
+  .jumbotron .lead {
+    font-size: 18px;
+  }
+
+  .jumbo {
+    background-image: url("../images/bg-people@2x.png");
+    background-size: cover;
+    color: white;
+    height: 484px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .jumbo .display-4 {
+    margin-top: 145px;
+    font-size: 55px;
+  }
+
+  .jumbo .lead {
+    font-size: 18px;
+  }
+
+  .bd-kapsul {
+    border-right: 1px solid gray;
+  }
+
+  .home-alta {
+    text-align: left;
+  }
+
+  footer span {
+    margin-right: 80px;
+  }
+
+  #judulblog {
+    top: 726px;
+    width: 913px;
+    height: 140px;
+    text-align: left;
+    font-size: 50px;
+    font-family: "Muli";
+    font-weight: 800;
+    letter-spacing: 0;
+    color: #19345e;
+    opacity: 1;
+  }
+
+  #larry {
+    left: 130px;
+    top: 5px;
+    bottom: 30px;
+    width: 276px;
+    height: 25px;
+    text-align: left;
+    font: Bold 20px/68px Muli;
+    letter-spacing: 0;
+    color: #19345e;
+    opacity: 1;
+  }
+
+  #pg-larry {
+    margin: 70px 145px;
+    top: 5px;
+    text-align: left;
+    font-size: 15px;
+    font-family: "Poppins";
+    letter-spacing: 0;
+    color: #19345e;
+    opacity: 1;
+  }
+}
