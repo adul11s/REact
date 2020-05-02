@@ -1,12 +1,12 @@
 import React from "react";
-// import Home from "./pages/home";
+
 import "./App.css";
-import Stateful from "./pages/stateful";
+import MainRoutes from "./routes/mainroutes";
 
 function App() {
   return (
     <div className="App">
-      <Stateful />
+      <MainRoutes />
     </div>
   );
 }
