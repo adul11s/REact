@@ -17,7 +17,7 @@ class SignIn extends Component {
       password: sandi,
     };
     axios
-      .post("https://derby.free.beeceptor.com/auth", data)
+      .post("https://aduka11.free.beeceptor.com/login", data)
       .then((response) => {
         if (response.data.hasOwnProperty("api_key")) {
           localStorage.setItem("api_key", response.data.api_key);
