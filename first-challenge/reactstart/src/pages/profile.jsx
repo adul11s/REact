@@ -1,13 +1,10 @@
 import React from "react";
 import { Redirect } from "react-router-dom";
 import Navbar from "../components/navbar";
+import { connect } from "react-redux";
 
 const Profile = (props) => {
-  const is_login = JSON.parse(localStorage.getItem("is_login"));
-  const email = localStorage.getItem("email");
-  const full_name = localStorage.getItem("full_name");
-
-  if (is_login === null) {
+  if (!props.dataUser.isLogin) {
     return (
       <Redirect
         to={{
@@ -24,8 +21,8 @@ const Profile = (props) => {
           <div class="row d-flex justify-content-center">
             <div class="col-5 border p-5">
               <h5>Profile</h5>
-              <p>Email: {email}</p>
-              <p>Nama lengkap: {full_name}</p>
+              <p>Email: {props.dataUser.email}</p>
+              <p>Nama lengkap: {props.dataUser.full_name}</p>
             </div>
           </div>
         </div>
@@ -34,4 +31,9 @@ const Profile = (props) => {
   }
 };
 
-export default Profile;
+const mapStateToProps = (state) => {
+  return {
+    dataUser: state.user,
+  };
+};
+export default connect(mapStateToProps)(Profile);

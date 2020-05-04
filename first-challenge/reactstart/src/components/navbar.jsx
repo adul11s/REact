@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import Search from "./search";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import { doLogout } from "../store/actions/loginAction";
+
 class Navbar extends Component {
   changeRouter = async (category) => {
     if (this.props.handleRouter) {
@@ -9,10 +12,13 @@ class Navbar extends Component {
       await this.props.history.replace("/news-category/" + category);
     }
   };
-  is_login = JSON.parse(localStorage.getItem("is_login"));
-  signOut = () => {
-    localStorage.removeItem("is_login");
-    this.props.history.push("/");
+
+  signOut = async () => {
+    await this.props.doLogout();
+    const isLogin = this.props.logout;
+    if (!isLogin) {
+      this.props.history.push("/");
+    }
   };
   render() {
     return (
@@ -97,7 +103,7 @@ class Navbar extends Component {
             </ul>
 
             <Search {...this.props} />
-            {this.is_login ? (
+            {this.props.dataUser.isLogin ? (
               <ul className="navbar-nav ml-auto">
                 <li className="nav-item">
                   <Link className="nav-link" href="">
@@ -105,7 +111,11 @@ class Navbar extends Component {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link onClick={this.signOut} className="nav-link" href="">
+                  <Link
+                    onClick={() => this.signOut()}
+                    className="nav-link"
+                    href=""
+                  >
                     Sign Out
                   </Link>
                 </li>
@@ -130,5 +140,13 @@ class Navbar extends Component {
     );
   }
 }
-
-export default Navbar;
+const mapStateToProps = (state) => {
+  return {
+    dataUser: state.user,
+    logout: state.user.isLogin,
+  };
+};
+const mapDispatchToProps = {
+  doLogout: doLogout,
+};
+export default connect(mapStateToProps, mapDispatchToProps)(Navbar);

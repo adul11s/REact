@@ -2,40 +2,23 @@ import React, { Component } from "react";
 import axios from "axios";
 import { withRouter } from "react-router-dom";
 import Navbar from "../components/navbar";
+import { connect } from "react-redux";
+import { doLogin, changeInputUser } from "../store/actions/loginAction";
 
 class SignIn extends Component {
-  state = { nama: "", sandi: "" };
-
-  changeInput = (el) => {
-    this.setState({ [el.target.name]: el.target.value });
-  };
-
-  login = () => {
-    const { nama, sandi } = this.state;
-    const data = {
-      username: nama,
-      password: sandi,
-    };
-    axios
-      .post("https://derby.free.beeceptor.com/auth", data)
-      .then((response) => {
-        if (response.data.hasOwnProperty("api_key")) {
-          localStorage.setItem("api_key", response.data.api_key);
-          localStorage.setItem("is_login", true);
-          localStorage.setItem("full_name", response.data.full_name);
-          localStorage.setItem("email", response.data.email);
-          this.props.history.push("/profile");
-        }
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+  login = async () => {
+    await this.props.doLogin();
+    const isLogin = this.props.isLogin;
+    console.log(isLogin);
+    if (isLogin) {
+      this.props.history.push("/profile");
+    }
   };
 
   render() {
     const message = this.props.location.state
       ? this.props.location.state.message
-      : "masukkan inputan";
+      : "masukkan username dan password";
     return (
       <React.Fragment>
         <Navbar {...this.props} />
@@ -52,7 +35,7 @@ class SignIn extends Component {
                     class="form-control"
                     id="exampleInputEmail1"
                     aria-describedby="emailHelp"
-                    onChange={(el) => this.changeInput(el)}
+                    onChange={(el) => this.props.changeInput(el)}
                   />
                   <small id="emailHelp" class="form-text text-muted">
                     We'll never share your email with anyone else.
@@ -66,7 +49,7 @@ class SignIn extends Component {
                     placeholder="password"
                     class="form-control"
                     id="exampleInputPassword1"
-                    onChange={(el) => this.changeInput(el)}
+                    onChange={(el) => this.props.changeInput(el)}
                   />
                 </div>
                 <button class="btn btn-primary" onClick={() => this.login()}>
@@ -80,5 +63,16 @@ class SignIn extends Component {
     );
   }
 }
+const mapStateToProps = (state) => {
+  return {
+    nama: state.user.nama,
+    sandi: state.user.sandi,
+    isLogin: state.user.isLogin,
+  };
+};
 
-export default withRouter(SignIn);
+const mapDispatchToProps = {
+  changeInput: (el) => changeInputUser(el),
+  doLogin: doLogin,
+};
+export default connect(mapStateToProps, mapDispatchToProps)(SignIn);

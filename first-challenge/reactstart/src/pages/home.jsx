@@ -3,6 +3,8 @@ import axios from "axios";
 import Navbar from "../components/navbar";
 import LatestNews from "../components/latesnews";
 import NewsFeed from "../components/newsfeed";
+import { Redirect } from "react-router-dom";
+import { connect } from "react-redux";
 
 const apiKey = "4ee3718da51b497a868ae709733953fa";
 const baseUrl = "https://newsapi.org/v2/";
@@ -97,52 +99,68 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <Navbar
-          doSearch={(event) => this.handleInputChange(event)}
-          handleRouter={(e) => this.handleRequestCategoryNews(e)}
-          getNews={() => this.getNews()}
-          keyword={this.state.search}
-          placeholder="search"
-          {...this.props}
-        />
-        <div class="container">
-          <div class="row my-5">
-            <div class="col-4">
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">
-                  {" "}
-                  <strong class="float-left">BERITA TERKINI</strong>
-                  <span class="float-right">lihat semua</span>
-                </li>
-                {this.state.data.slice(0, 5).map((el, index) => (
-                  <div key={index}>
-                    <LatestNews
-                      title={el.title}
-                      index={index + 1}
-                      url={el.url}
-                    />
-                  </div>
-                ))}
-              </ul>
-            </div>
-            <div class="col-8">
-              {this.state.newsFeed.slice(0, 5).map((el, index) => (
-                <div key={index}>
-                  <NewsFeed
-                    url={el.url}
-                    title={el.title}
-                    urlToImage={el.urlToImage}
-                    description={el.description}
-                    publishedAt={el.publishedAt}
-                  />
+        {this.props.dataUser.isLogin ? (
+          <React.Fragment>
+            <Navbar
+              doSearch={(event) => this.handleInputChange(event)}
+              handleRouter={(e) => this.handleRequestCategoryNews(e)}
+              getNews={() => this.getNews()}
+              keyword={this.state.search}
+              placeholder="search"
+              {...this.props}
+            />
+            <div class="container">
+              <div class="row my-5">
+                <div class="col-4">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      {" "}
+                      <strong class="float-left">BERITA TERKINI</strong>
+                      <span class="float-right">lihat semua</span>
+                    </li>
+                    {this.state.data.slice(0, 5).map((el, index) => (
+                      <div key={index}>
+                        <LatestNews
+                          title={el.title}
+                          index={index + 1}
+                          url={el.url}
+                        />
+                      </div>
+                    ))}
+                  </ul>
                 </div>
-              ))}
-            </div>
-          </div>
-        </div>{" "}
+                <div class="col-8">
+                  {this.state.newsFeed.slice(0, 5).map((el, index) => (
+                    <div key={index}>
+                      <NewsFeed
+                        url={el.url}
+                        title={el.title}
+                        urlToImage={el.urlToImage}
+                        description={el.description}
+                        publishedAt={el.publishedAt}
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>{" "}
+          </React.Fragment>
+        ) : (
+          <Redirect
+            to={{
+              pathname: "/signin",
+              state: { message: "login ulang" },
+            }}
+          />
+        )}
       </div>
     );
   }
 }
 
-export default Home;
+const mapStateToProps = (state) => {
+  return {
+    dataUser: state.user,
+  };
+};
+export default connect(mapStateToProps)(Home);
