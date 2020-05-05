@@ -4,8 +4,8 @@ import Navbar from "../components/navbar";
 import LatestNews from "../components/latesnews";
 import NewsFeed from "../components/newsfeed";
 
-const apiKey = "4ee3718da51b497a868ae709733953fa";
-const baseUrl = "https://newsapi.org/v2/";
+const apiKey = process.env.REACT_APP_API_KEY;
+const baseUrl = process.env.REACT_APP_BASE_URL;
 const urlHeadline = baseUrl + "top-headlines?country=id&apiKey=" + apiKey;
 class Home extends Component {
   state = {
