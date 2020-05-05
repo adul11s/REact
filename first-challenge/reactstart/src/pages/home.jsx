@@ -13,6 +13,7 @@ class Home extends Component {
   state = {
     data: [],
     newsFeed: [],
+    isLoading: true,
   };
   getData = async () => {
     const response = await axios.get(urlHeadline);
